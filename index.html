@@ -14,7 +14,22 @@
 
     <div id="app">
 
-      
+        <!-- v-on añade eventos a la etiqueta -->
+        <button v-on:click="unaFuncion">Una función</button>
+        <!-- "v-on:" puede abreviarse como "@" -->
+        <button @click="unaFuncion">Una función</button>
+
+        <br>
+        <br>
+
+        <button @click="eventoClick">v-on:click</button>
+
+        <br>
+        <br>
+
+        <input @keydown.13="eventoKeyDown" placeholder="Click & Enter (presionar)"></input>
+        <input @keyup.13="eventoKeyUp" placeholder="Click & Enter (soltar)"></input>
+
         
     </div>
 
