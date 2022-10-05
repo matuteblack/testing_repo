@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clase 4</title>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -14,59 +14,7 @@
 
     <div id="app">
 
-        <!-- v-once no renderiza los cambios que ocurren en la consola -->
-        <p v-once> {{message}} </p>
-
-        <!-- v-bind: cambia los valores de los atributos -->
-        <div v-bind:class="checkeado ? 'estaBien' : 'hayUnError'">
-            <p>Insertar código</p>
-
-            <!-- v-html inserta codigo -->
-            <div v-html="codHtml"></div>
-        </div>
-
-        <!-- v-show aplica y desaplica el estilo display: none; -->
-        <button v-show="botonShow">Boton con v-show</button> <br>
-
-        <!-- v-if elimina los elementos si no cumplen con la condicion booleana  -->
-        <button v-if="botonIf">Boton con v-if</button> <br>
-
-        <!-- v-if también funciona con comparadores -->
-        <button v-if="botonComparado === 'si' || botonComparado === 2">Boton con v-if comparado</button> <br>
-
-        <!-- v-model detecta los cambios en los inputs -->
-        <input type="checkbox" v-model="checkeado"/>
-        
-        <br>
-        
-        <div class="listaContenedor">
-            <ul>
-                <li v-for="item in listaDeElementos">El elemento de la lista es: {{item}}</li>
-            </ul>
-        </div>
-
-
-
-
-
-
-        
-        <br>
-        <br>
-
-
-
-
-
-        <!-- Carousel con v-for -->
-
-        <div class="carousel">
-            <ul style="display: flex; list-style: none;">
-                <li v-for="img in listaImg">
-                    <img :src="img" alt="" style="max-width: 200px;"/>
-                </li>
-            </ul>
-        </div>
+      
         
     </div>
 
