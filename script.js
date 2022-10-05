@@ -4,14 +4,8 @@ var app = new Vue
 
   data:
     {
-      message:          'Hola Vue!',
-      botonShow:        true,
-      botonIf:          true,
-      botonComparado:   'si',
-      codHtml:          '<h1>Titular insertado con Vue</h1>',
-      checkeado:        false,
-      listaDeElementos: [],
-      listaImg: []
+      email: '',
+      listaEmail: []
     },
 
   methods:
@@ -31,6 +25,11 @@ var app = new Vue
       eventoKeyUp: function()
         {
           alert('Soltaste la tecla enter!');
+        },
+      agregar: function()
+        { 
+          this.listaEmail.push(this.email);
+          this.email = '';
         }
     }
 });

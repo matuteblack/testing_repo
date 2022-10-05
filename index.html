@@ -30,6 +30,15 @@
         <input @keydown.13="eventoKeyDown" placeholder="Click & Enter (presionar)"></input>
         <input @keyup.13="eventoKeyUp" placeholder="Click & Enter (soltar)"></input>
 
+        <br>
+        <br>
+
+        <h2>Escribe en tiempo real con v-model y guarda en una lista mediante v-on:enter</h2>
+        <input type="text" v-model="email" @keydown.enter="agregar" placeholder="Escribe en tiempo real"/>
+        <ul v-for="item in listaEmail">
+            <li>{{item}}</li>
+        </ul>
+    
         
     </div>
 
