@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.hayUnError {
+    background: #ff0019;
+    color: #fff;
+}
+.estaBien {
+    background: rgb(3, 116, 3);
+    color: #fff;
+}
