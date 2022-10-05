@@ -1,17 +1,38 @@
 var app = new Vue
 ({
   el: '#app',
+
   data:
-  {
-    message:          'Hola Vue!',
-    botonShow:        true,
-    botonIf:          true,
-    botonComparado:   'si',
-    codHtml:          '<h1>Titular insertado con Vue</h1>',
-    checkeado:        false,
-    listaDeElementos: [],
-    listaImg: []
-  }
+    {
+      message:          'Hola Vue!',
+      botonShow:        true,
+      botonIf:          true,
+      botonComparado:   'si',
+      codHtml:          '<h1>Titular insertado con Vue</h1>',
+      checkeado:        false,
+      listaDeElementos: [],
+      listaImg: []
+    },
+
+  methods:
+    {
+      unaFuncion: function()
+        {
+          console.log('Texto en consola desplegado por la función');
+        },
+      eventoClick: function()
+        {
+          console.log('Clickeaste el botón');
+        },
+      eventoKeyDown: function()
+        {
+          alert('Presionaste enter!');
+        },
+      eventoKeyUp: function()
+        {
+          alert('Soltaste la tecla enter!');
+        }
+    }
 });
 
 setTimeout(() =>
