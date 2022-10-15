@@ -34,22 +34,22 @@
         <br>
 
         <h2>Toma valores con v-model, guarda en una lista con v-on:enter y recorre la lista con v-for</h2>
-        <label for="">Agregar email:</label>
+        <label for="agregar">Agregar email:</label>
         <br>
-        <input type="text" v-model="email" @keydown.enter="agregar" placeholder="Presionar enter para enviar"/>
+        <input id="agregar" type="text" v-model="email" @keydown.enter="agregar" placeholder="Presionar enter para enviar"/>
 
-        <ul v-for="item in listaEmail">
-            <div style="list-style: none; display:flex;">
-                <input type="checkbox" name="checkbox" v-model="item.check">
-                <label for="checkbox" v-if="item.show"></label>
-                <li style="margin: 0 .5rem;">{{item.email}} {{item.check ? '(Seleccionado)' : ''}}</li>
-            </div>
+        <button @click="limpiarLista">Borrar todo</button>
+        <button @click="limpiarSeleccion">Borrar seleccion</button>
+
+        <ul>
+            <li v-for="item in listaEmail" v-if="item.show">
+                <input v-bind:id="item.checkboxId" type="checkbox" name="checkbox" v-model="item.check">
+                <label v-bind:for="item.checkboxId">{{item.email}} {{item.check ? '(Seleccionado)' : ''}}</label>
+            </li>
         </ul>
 
         <br>
         
-        <button @click="limpiarLista">Borrar todo</button>
-        <button @click="limpiarSeleccion">Borrar seleccion</button>
 
 
     
