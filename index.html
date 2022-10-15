@@ -33,11 +33,25 @@
         <br>
         <br>
 
-        <h2>Escribe en tiempo real con v-model y guarda en una lista mediante v-on:enter</h2>
-        <input type="text" v-model="email" @keydown.enter="agregar" placeholder="Escribe en tiempo real"/>
+        <h2>Toma valores con v-model, guarda en una lista con v-on:enter y recorre la lista con v-for</h2>
+        <label for="">Agregar email:</label>
+        <br>
+        <input type="text" v-model="email" @keydown.enter="agregar" placeholder="Presionar enter para enviar"/>
+
         <ul v-for="item in listaEmail">
-            <li>{{item}}</li>
+            <div style="list-style: none; display:flex;">
+                <input type="checkbox" name="checkbox">
+                <label for="checkbox"></label>
+                <li style="margin: 0 .5rem;">{{item}}</li>
+            </div>
         </ul>
+
+        <br>
+        
+        <button @click="limpiarLista">Borrar todo</button>
+        <button @click="limpiarSeleccion">Borrar seleccion</button>
+
+
     
         
     </div>
