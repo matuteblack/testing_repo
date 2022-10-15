@@ -44,9 +44,7 @@ var app = new Vue
         { 
           for (let item of this.listaEmail)
             {
-              if (item.check) {
-                item.checked = false;
-              }
+              if (item.check) item.show = false;
             }
         }
     }
