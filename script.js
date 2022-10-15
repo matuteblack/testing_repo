@@ -30,6 +30,14 @@ var app = new Vue
         { 
           this.listaEmail.push(this.email);
           this.email = '';
+        },
+      limpiarLista: function()
+        {
+          this.listaEmail = [];
+        },
+      limpiarSeleccion: function()
+        {
+          
         }
     }
 });
