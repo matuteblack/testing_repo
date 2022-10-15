@@ -38,7 +38,7 @@ var app = new Vue
         },
       limpiarLista: function()
         {
-          this.listaEmail = {};
+          this.listaEmail = [];
         },
       limpiarSeleccion: function()
         { 
