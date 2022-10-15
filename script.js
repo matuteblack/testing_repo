@@ -54,3 +54,14 @@ var app = new Vue
     }
 });
 
+
+// Spread
+
+function validarSuma(elementoA, elementoB)
+  {
+    if (!elementoA) return -1;            // si A no es válido, cortar y dar error
+    if (!elementoB) return elementoA;     // si B no es válido, devolver sólo A
+    const A = +elementoA;                 // el signo + para parsear A (por si es string)
+    const B = +elementoB;                 // el signo + para parsear B (por si es string)
+    return A + B;
+  }
