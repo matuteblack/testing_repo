@@ -5,6 +5,7 @@ var app = new Vue
   data:
     {
       email: '',
+      checkboxId: 0,
       listaEmail: []
     },
 
@@ -28,17 +29,20 @@ var app = new Vue
         },
       agregar: function()
         {
-          const infoMail = {
-            email: this.email,
-            check: false,
-            show: true
-          }
+          const infoMail = 
+            {
+              email: this.email,
+              checkboxId: this.checkboxId++,
+              check: false,
+              show: true
+            }
           this.listaEmail.push(infoMail);
           this.email = '';
         },
       limpiarLista: function()
         {
           this.listaEmail = [];
+          this.checkboxId = 0;
         },
       limpiarSeleccion: function()
         { 
