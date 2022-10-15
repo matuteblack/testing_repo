@@ -44,18 +44,11 @@
         <ul>
             <li v-for="item in listaEmail" v-if="item.show">
                 <input v-bind:id="item.checkboxId" type="checkbox" name="checkbox" v-model="item.check">
-                <label v-bind:for="item.checkboxId">{{item.email}} {{item.check ? '(Seleccionado)' : ''}}</label>
+                <label      :for="item.checkboxId">{{item.email}} {{item.check ? '(Seleccionado)' : ''}}</label>
             </li>
         </ul>
 
-        <br>
-
-        <p>testing new commit</p>
-        
-
-
-    
-        
+        <br>      
     </div>
 
     
