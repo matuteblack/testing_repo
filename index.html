@@ -40,9 +40,9 @@
 
         <ul v-for="item in listaEmail">
             <div style="list-style: none; display:flex;">
-                <input type="checkbox" name="checkbox">
-                <label for="checkbox"></label>
-                <li style="margin: 0 .5rem;">{{item}}</li>
+                <input type="checkbox" name="checkbox" v-model="item.check">
+                <label for="checkbox" v-if="item.show"></label>
+                <li style="margin: 0 .5rem;">{{item.email}} {{item.check ? '(Seleccionado)' : ''}}</li>
             </div>
         </ul>
 

@@ -27,17 +27,27 @@ var app = new Vue
           alert('Soltaste la tecla enter!');
         },
       agregar: function()
-        { 
-          this.listaEmail.push(this.email);
+        {
+          const infoMail = {
+            email: this.email,
+            check: false,
+            show: true
+          }
+          this.listaEmail.push(infoMail);
           this.email = '';
         },
       limpiarLista: function()
         {
-          this.listaEmail = [];
+          this.listaEmail = {};
         },
       limpiarSeleccion: function()
-        {
-          
+        { 
+          for (let item of this.listaEmail)
+            {
+              if (item.check) {
+                item.checked = false;
+              }
+            }
         }
     }
 });
